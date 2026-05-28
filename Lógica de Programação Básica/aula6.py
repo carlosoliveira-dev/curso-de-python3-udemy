@@ -1,0 +1,6 @@
+print('aula6')
+print(1 + 1)
+print('a' + 'b')
+print(int('1') + 1)
+print(bool(' '))
+print('1' + 1)
