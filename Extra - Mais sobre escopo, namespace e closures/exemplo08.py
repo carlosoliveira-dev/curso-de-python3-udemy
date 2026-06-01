@@ -23,6 +23,7 @@
 #
 ################################################################################
 
+from sitecustomize import get_all_names
 
 nome_global = "nome_global"
 

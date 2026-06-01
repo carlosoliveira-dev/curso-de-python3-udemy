@@ -14,11 +14,15 @@
 ################################################################################
 
 
+"""
+ALTERAR UMA VARIÁVEL FORA DO SEU ESCOPO É UMA MÁ PRÁTICA DE PROGRAMAÇÃO
+"""
+
 nome_global = "nome_global"
 
 
 def func_global() -> None:
-    global nome_global
+    global nome_global # ao invés de criar outra variável use a variável declarada acima
 
     nome_enclosing = "nome_enclosing"
     nome_global = 123456
@@ -26,7 +30,7 @@ def func_global() -> None:
     def func_interna() -> None:
         def func3() -> None:
             def func4() -> None:
-                nonlocal nome_enclosing
+                nonlocal nome_enclosing # encontre a variável em uma das funções
 
                 nome_local = "nome_local"
                 nome_enclosing = 654321
