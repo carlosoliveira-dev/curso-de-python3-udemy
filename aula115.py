@@ -22,5 +22,29 @@
 
   mostra a versão do pip e o path do ambiente virtual
   pip --version
-  '''
 
+  instalar pacotes
+  pip install pymysql
+
+  instalar versão específica
+  pip install pymysql==0.10.0
+  
+  atualizar pacote para última versão
+  pip install pymysql --upgrade
+
+  desinstalar pacotes
+  pip uninstall pymysql
+
+  listar os pacotes instalados
+  pip freeze
+  
+  Criando e usando um requirements.txt
+  pip freeze > requirements.txt
+
+  Instalando tudo do requirements.txt
+  Crie e ative um ambiente virtual para não instalar pacotes no python global
+  pip install -r requirements.txt
+
+  listar as versões disponíveis do pacote e a versão instalada
+  pip index versions pymysql
+  '''
