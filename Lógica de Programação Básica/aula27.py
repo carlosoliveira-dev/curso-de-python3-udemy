@@ -8,6 +8,6 @@ Obs.: a função len retorna a qtd
 de caracteres da str
 """
 variavel = 'Olá mundo'
-print(variavel[::-1])
+print(variavel[::-1]) # imprime ao contrário
 print(variavel[0:3:1])
 print(len(variavel))
