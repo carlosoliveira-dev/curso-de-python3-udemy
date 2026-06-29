@@ -4,3 +4,4 @@ aula99_package/__pycache__
 dados/__pycache__
 venv
 .vscode/settings.json
+.mypy_cache
