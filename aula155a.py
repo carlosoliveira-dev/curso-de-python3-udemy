@@ -26,7 +26,7 @@ class Meta(type):
 
         if 'nome' not in instancia.__dict__:
             raise NotImplementedError('Crie o attr nome')
-
+        
         return instancia
 
 
@@ -47,4 +47,10 @@ class Pessoa(metaclass=Meta):
 
 
 p1 = Pessoa('Luiz')
+print()
+
+# mostra o __repr__ definido na metaclass
+print(p1)
+print()
+
 p1.falar()
