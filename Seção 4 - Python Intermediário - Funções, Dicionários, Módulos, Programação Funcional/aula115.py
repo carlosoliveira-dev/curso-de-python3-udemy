@@ -9,12 +9,12 @@
   Você pode dar o nome que preferir para um
   ambiente virtual, mas os mais comuns são:
   venv env .venv .env
-  
+
   Como criar ambientes virtuais
   Abra a pasta do seu projeto no terminal
   e digite:
   python -m venv venv
-  
+
   Ativando e desativando meu ambiente virtual
   Windows: .\venv\Scripts\activate
   Linux e Mac ou windows com git bash: source venv/Scripts/activate
@@ -28,7 +28,7 @@
 
   instalar versão específica
   pip install pymysql==0.10.0
-  
+
   atualizar pacote para última versão
   pip install pymysql --upgrade
 
@@ -37,7 +37,7 @@
 
   listar os pacotes instalados
   pip freeze
-  
+
   Criando e usando um requirements.txt
   pip freeze > requirements.txt
 
