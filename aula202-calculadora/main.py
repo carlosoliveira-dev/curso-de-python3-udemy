@@ -4,7 +4,11 @@ source venv/Scripts/Activate
 pip install pyside6
 pip install qdarkstyle
 pip install pyinstaller
+pip install pillow
 clear ; python main.py
+
+Pyinstaller no Windows 11 usando Git Bash:
+pyinstaller --name="Calculadora" --noconfirm --noconsole --onefile --add-data="../files/:files" --icon="../files/icon.png" --clean --log-level=WARN --distpath="output/dist" --workpath="output/build" --specpath="output" main.py
 '''
 import sys
 
