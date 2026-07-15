@@ -3,9 +3,13 @@ __pycache__
 aula99_package/__pycache__
 dados/__pycache__
 venv
+.env
 .vscode/settings.json
 .mypy_cache
 aula193/drivers
 aula197/arquivos_novos
 aula200/ new.JPG
 aula202-calculadora/output
+aula205/db.sqlite3
+aula206/mysql_206
+mysql_206
