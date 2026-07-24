@@ -1,7 +1,7 @@
 """
 Lista de listas e seus índices
 """
-salas = [
+salas: list[list] = [
     # 0        1
     ['Maria', 'Helena', ],  # 0
     # 0

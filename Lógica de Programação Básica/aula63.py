@@ -47,8 +47,8 @@ cpf_nove_digitos = cpf[:9]
 contagem = 10
 lista_soma = []
 for digito in cpf_nove_digitos:
-    digito = int(digito)
-    lista_soma.append(digito * contagem)
+    digito_int = int(digito)
+    lista_soma.append(digito_int * contagem)
     contagem -= 1
 print(lista_soma)
 somado = 0
@@ -72,8 +72,8 @@ cpf_dez_digitos = cpf_nove_digitos + str(primeiro_digito)
 contagem = 11
 lista_soma = []
 for digito in cpf_dez_digitos:
-    digito = int(digito)
-    lista_soma.append(digito * contagem)
+    digito_int = int(digito)
+    lista_soma.append(digito_int * contagem)
     contagem -= 1
 print(lista_soma)
 somado = 0
@@ -90,9 +90,11 @@ if resto > 9:
 else:
     segundo_digito = resto
     print(f'{segundo_digito=}')
-cpf_gerado_pelo_calculo = f'{cpf_nove_digitos}{primeiro_digito}{segundo_digito}'
+cpf_gerado_pelo_calculo = (
+                            f'{cpf_nove_digitos}'
+                            f'{primeiro_digito}{segundo_digito}'
+                           )
 if cpf == cpf_gerado_pelo_calculo:
     print(f'{cpf=} é válido')
 else:
     print(f'{cpf=} é inválido')
-    

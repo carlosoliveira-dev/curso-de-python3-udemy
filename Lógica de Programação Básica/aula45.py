@@ -11,7 +11,7 @@ iteratador = iter(texto)  # iterator .__iter__()
 
 while True:
     try:
-        letra = next(iteratador) # .__next__() método next do iterator
+        letra = next(iteratador)  # .__next__() método next do iterator
         print(letra)
     except StopIteration:
         print('acabou a iteração :)')

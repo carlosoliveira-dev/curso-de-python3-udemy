@@ -6,7 +6,8 @@ https://docs.python.org/pt-br/3/tutorial/floatingpoint.html
 """
 import decimal
 
-numero_1 = decimal.Decimal('0.1') # o segredo para o cálculo dar certo é passar no formato str
+# o segredo para o cálculo dar certo é passar no formato str
+numero_1 = decimal.Decimal('0.1')
 numero_2 = decimal.Decimal('0.7')
 numero_3 = numero_1 + numero_2
 print(numero_3)

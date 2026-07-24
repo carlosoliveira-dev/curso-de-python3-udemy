@@ -21,4 +21,5 @@ else:
 
 # Avaliação de curto circuito
 # print(True and False and True)
-# print(True and 0 and True) # o python para no 0 e retorna ele, sem avaliar o True depois do 0
+# print(True and 0 and True) # o python para no 0 e retorna ele,
+# sem avaliar o True depois do 0

@@ -9,7 +9,7 @@ Exiba os índices da lista
 lista = ['Maria', 'Helena', 'Luiz', 'Carlos', 'Eliane', 'Cassiano', 'Júnior']
 lista.append('João')
 
-indices = range(len(lista)) # cria os índices de forma dinâmica
+indices = range(len(lista))  # cria os índices de forma dinâmica
 
 for indice in indices:
     print(indice, lista[indice], type(lista[indice]))

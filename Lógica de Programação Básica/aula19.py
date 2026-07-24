@@ -14,5 +14,8 @@ menor = 1 < 2
 menor_ou_igual = 2 <= 2
 igual = 'a' == 'a'
 diferente = 'a' != 'b'
-print(f'Resultados dos operadores de comparação:')
-print(f'{maior=}\n{maior_ou_igual=}\n{menor=}\n{menor_ou_igual=}\n{igual=}\n{diferente=}')
+print('Resultados dos operadores de comparação:')
+print(
+    f'{maior=}\n{maior_ou_igual=}\n'
+    f'{menor=}\n{menor_ou_igual=}\n{igual=}\n{diferente=}'
+    )

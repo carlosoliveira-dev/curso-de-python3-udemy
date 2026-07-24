@@ -1,8 +1,9 @@
 condicao1 = False
-condicao2 = True
+condicao2 = False
 condicao3 = False
-condicao4 = False
-# vai executar somente uma condição, a primeira que for verdadeira, ou seja, a primeira que for True
+condicao4 = True
+# vai executar somente uma condição, a primeira que for verdadeira,
+# ou seja, a primeira que for True
 if condicao1:
     print(f' código para {condicao1=}')
 elif condicao2:

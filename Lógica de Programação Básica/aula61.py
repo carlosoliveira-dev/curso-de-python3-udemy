@@ -10,7 +10,7 @@ Ex.:  746.824.890-70 (746824890)
 *  7   4  6  8  2  4  8  9  0
    70  36 48 56 12 20 32 27 0
 
-Somar todos os resultados: 
+Somar todos os resultados:
 70+36+48+56+12+20+32+27+0 = 301
 Multiplicar o resultado anterior por 10
 301 * 10 = 3010
@@ -30,8 +30,8 @@ contagem = 10
 lista_soma = []
 
 for digito in cpf:
-    digito = int(digito)
-    lista_soma.append(digito * contagem)
+    digito_int = int(digito)
+    lista_soma.append(digito_int * contagem)
     contagem -= 1
 
 print(lista_soma)
@@ -56,4 +56,3 @@ if resto > 9:
 else:
     primeiro_digito = resto
     print(f'{primeiro_digito=}')
-

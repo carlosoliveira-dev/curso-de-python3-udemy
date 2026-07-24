@@ -69,16 +69,15 @@ Criar, ler, alterar, apagar = lista[i] (CRUD)
 """
 #        0   1   2   3
 lista = [10, 20, 30, 40]
-lista.append('Luiz')
+# lista.append('Luiz')
 nome = lista.pop()
 lista.append(1233)
 del lista[-1]
 # lista.clear()
-lista.insert(100, 5) # indice 100 não existe então o python adiciona no final da lista
+# indice 100 não existe então o python adiciona no final da lista
+lista.insert(100, 5)
 print(lista)
 print(lista[4])
-
-
 
 
 """
@@ -100,11 +99,9 @@ Criar, ler, alterar, apagar = lista[i] (CRUD)
 lista_a = [1, 2, 3]
 lista_b = [4, 5, 6]
 lista_c = lista_a + lista_b
-lista_a.extend(lista_b) # adiciona os elementos da lista_b na lista_a
+lista_a.extend(lista_b)  # adiciona os elementos da lista_b na lista_a
 print(f'{lista_a=}')
 print(f'{lista_c=}')
-
-
 
 
 """
@@ -112,10 +109,12 @@ Cuidados com dados mutáveis
 = - copiado o valor (imutáveis)
 = - aponta para o mesmo valor na memória (mutável)
 """
-lista_a = ['Luiz', 'Maria', 1, True, 1.2]
-# lista_b = lista_a # não está fazendo a cópia sendo que se modificar um elemento em uma lista, automaticamente modifica nas duas
-lista_b = lista_a.copy() # módulo que copia listas com valores imutáveis(shallow copy)
+# lista_a = ['Luiz', 'Maria', 1, True, 1.2]
+# lista_b = lista_a # não está fazendo a cópia sendo que se modificar um
+# elemento em uma lista, automaticamente modifica nas duas
+# módulo que copia listas com valores imutáveis(shallow copy)
+lista_b = lista_a.copy()
 
-lista_a[0] = 'Qualquer coisa'
+# lista_a[0] = 'Qualquer coisa'
 print(f'{lista_a=}')
 print(f'{lista_b=}')

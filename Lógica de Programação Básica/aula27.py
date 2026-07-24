@@ -4,10 +4,10 @@ Fatiamento de strings
  Olá mundo
 -987654321
 Fatiamento [i:f:p] [::] i - início, f - final, p - passo
-Obs.: a função len retorna a qtd 
+Obs.: a função len retorna a qtd
 de caracteres da str
 """
 variavel = 'Olá mundo'
-print(variavel[::-1]) # imprime ao contrário
+print(variavel[::-1])  # imprime ao contrário
 print(variavel[0:3:1])
 print(len(variavel))

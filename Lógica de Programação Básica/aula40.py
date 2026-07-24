@@ -12,14 +12,26 @@ while True:
     operadores = '+-*/'
     if operador in operadores:
         if operador == '+':
-            print(f'{num1_float} + {num2_float} = {num1_float + num2_float}')
+            print(
+                f'{num1_float} + {num2_float} = '
+                f'{float(num1_float) + float(num2_float)}'
+                )
         elif operador == '-':
-            print(f'{num1_float} - {num2_float} = {num1_float - num2_float}')
+            print(
+                f'{num1_float} - {num2_float} = '
+                f'{float(num1_float) - float(num2_float)}'
+                )
         elif operador == '*':
-            print(f'{num1_float} * {num2_float} = {num1_float * num2_float}')
+            print(
+                f'{num1_float} * {num2_float} = '
+                f'{float(num1_float) * float(num2_float)}'
+                )
         elif operador == '/':
             if num2_float != 0:
-                print(f'{num1_float} / {num2_float} = {num1_float / num2_float}')
+                print(
+                    f'{num1_float} / {num2_float} = '
+                    f'{float(num1_float) / float(num2_float)}'
+                    )
             else:
                 print('Não é possível dividir por zero.')
     else:

@@ -11,12 +11,12 @@ try:
     numero_float = float(numero_str)
     print('FLOAT:', numero_float)
     print(f'O dobro de {numero_str} é {numero_float * 2:.2f}')
-except:
+except Exception:
     print('Isso não é um número')
 
 try:
     n = 1 / 0
-except:
+except Exception:
     print('Não é possível dividir por zero')
 
 # if numero_str.isdigit():

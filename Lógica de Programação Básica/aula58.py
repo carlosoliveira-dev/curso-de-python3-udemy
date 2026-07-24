@@ -22,7 +22,8 @@ Erros nunca devem passar silenciosamente.
 A menos que sejam explicitamente silenciados.
 Diante da ambiguidade, recuse a tentação de adivinhar.
 Deve haver um -- e só um -- modo óbvio para fazer algo.
-Embora esse modo possa não ser óbvio à primeira vista a menos que você seja holandês.
+Embora esse modo possa não ser óbvio à primeira vista a menos
+que você seja holandês.
 Agora é melhor que nunca.
 Embora nunca frequentemente seja melhor que *exatamente* agora.
 Se a implementação é difícil de explicar, é uma má ideia.
