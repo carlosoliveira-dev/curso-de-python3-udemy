@@ -13,17 +13,28 @@
 # em geral.
 
 
+from typing import Protocol
+from collections.abc import Callable
+from utils import Logger
+
+
 def externa(a):
     # Enclosing é a função externa
     def interna(b):
         # Função interna precisa de `a`
         return f"{a} {b}"
 
-    return interna  # Função interna não executada(o python pensa, eu vou executar depois :)
+    # Função interna não executada(o python pensa, eu vou executar depois :)
+    return interna
     # Retorna uma referência para a função interna(b)
 
-imcompleto = externa("Luiz") # basicamente closures precisam lembrar desse argumento passado pra função externa(fica armazenado na call stack)
-completo = imcompleto("Otávio") # agora vai usar o argumento salvo na call stack e terminar a execução da função interna
+
+# basicamente closures precisam lembrar desse argumento passado pra função
+# externa(fica armazenado na call stack)
+imcompleto = externa("Luiz")
+# agora vai usar o argumento salvo na call stack e terminar a execução
+# da função interna
+completo = imcompleto("Otávio")
 
 # print(completo)
 
@@ -39,10 +50,7 @@ completo = imcompleto("Otávio") # agora vai usar o argumento salvo na call stac
 #
 
 
-################################################################################
-
-
-from utils import Logger
+###############################################################################
 
 
 def make_logger(name: str, color: str, icon: str = "…") -> Logger:
@@ -68,14 +76,12 @@ error = make_logger("error", "\033[031m", icon="✘")
 # print()
 
 
-################################################################################
+###############################################################################
 
 
 #
 # Exemplos de closures
 #
-from collections.abc import Callable
-from typing import Protocol
 
 
 # Factory (fábrica de funções)
@@ -93,7 +99,7 @@ def make_multiplier(multiplier: float, /) -> Callable[[float], float]:
 # print("3 * 2 =   ", times_two(3))  # 3 * [2] = 6 - [2] lembrado
 # print("3 * 5 =   ", times_three(5))  # 5 * [3] = 15 - [3] lembrado
 
-################################################################################
+###############################################################################
 
 
 # Validador simples
@@ -110,12 +116,16 @@ def make_lt_checker(min_value: int) -> Callable[[int], bool]:
 # print("30 < 10   ", lt_ten(30))  # 30 é menor do que 10? False
 # print("9 < 10   ", lt_ten(9))  # 9 é menor do que 10? True
 
-################################################################################
+###############################################################################
 
 """
-Callback é quando você executa uma ação e depois de executada você quer fazer outra coisa na sequência
+Callback é quando você executa uma ação e depois de executada você quer fazer
+outra coisa na sequência
 """
-def with_callback(value: str, callback: Callable[[str], str]) -> Callable[[], str]:
+
+
+def with_callback(
+        value: str, callback: Callable[[str], str]) -> Callable[[], str]:
     # Você também poderia realizar algo aqui
     def runner() -> str:
         print(f"Realizando alguma operação com o valor {value!r}")
@@ -136,7 +146,7 @@ def my_callback(value: str) -> str:
 # print(f"Callback:    {result!r}")
 
 
-################################################################################
+###############################################################################
 
 
 class Operation[**P, R](Protocol):
@@ -181,7 +191,7 @@ def operation(*args: str) -> list[str]:
 # op4 = operation_cached("b", "b", "c")
 # op5 = operation_cached("b", "b", "c")  # em cache
 
-################################################################################
+###############################################################################
 
 
 @cacher
@@ -210,8 +220,6 @@ def get_from_db(id: int, /) -> str:
 
 
 # ** Introspecção de closures
-
-from collections.abc import Callable
 
 
 def enclosing(a: str) -> Callable[[str], str]:
@@ -247,7 +255,8 @@ print("Freevars [Enclosing]  ", same_closure.__code__.co_freevars)
 # Variáveis dessa função usadas em funções internas
 print("Cellvars [Usadas   ]  ", same_closure.__code__.co_cellvars)
 # Células da closure se existir
-print("Closure  [Closure  ]  ", same_closure.__closure__[0].cell_contents)
+print("Closure  [Closure  ]  ", same_closure.__closure__[  # type:ignore
+      0].cell_contents)
 
 
-################################################################################
+###############################################################################

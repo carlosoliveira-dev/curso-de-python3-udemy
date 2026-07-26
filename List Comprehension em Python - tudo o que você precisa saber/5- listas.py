@@ -23,4 +23,3 @@ novos_nomes = [
 ]
 
 print(f'{novos_nomes}')
-

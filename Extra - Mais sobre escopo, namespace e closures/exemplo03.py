@@ -1,4 +1,4 @@
-################################################################################
+###############################################################################
 #
 # O que é namespace?
 #
@@ -7,15 +7,16 @@
 # código. Sempre que você cria um nome, essa associação é guardada dentro de um
 # namespace.
 #
-# Vamos usar `globals()` e `locals()` no mesmo código anterior e confirmar isso.
-#
+# Vamos usar `globals()` e `locals()` no mesmo código anterior e confirmar
+# isso.
+
 # globals(): Retorna um dicionário que representa o namespace global do módulo
 #            atual. Isso inclui todos os nomes definidos na raiz do arquivo.
 # locals():  Retorna um dicionário com os nomes definidos no escopo local onde
 #            a função está sendo executada. Importante: ela só inclui nomes que
 #            já foram definidos antes da sua chamada.
 #
-################################################################################
+###############################################################################
 from pprint import pprint
 
 namespace_global = globals()
@@ -24,7 +25,9 @@ um_nome = "um_nome (GLOBAL)"
 # print(um_nome, namespace_global["um_nome"])
 # print(id(um_nome), id(namespace_global["um_nome"]))
 # pprint(__builtins__)
-pprint(dir(__builtins__)) # são funções nativas tipo print() e recursos nativos que o python injeta no módulo
+# são funções nativas tipo print() e recursos nativos que o python injeta
+# no módulo
+pprint(dir(__builtins__))
 
 
 def func_global(sou_local: str) -> None:
@@ -40,9 +43,3 @@ def func_global(sou_local: str) -> None:
 
 # print("GLOBALS (namespace do módulo)")
 # pprint(globals())
-
-#
-#
-#
-#
-#

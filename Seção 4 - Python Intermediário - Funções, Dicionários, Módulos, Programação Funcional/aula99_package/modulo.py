@@ -4,8 +4,10 @@
   todas as importações do programa devem ser relativas ao arquivo __main__
   e elas não vão funcionar nos outros módulos
   execute esse módulo para testar,
-  isso irá gerar uma exceção: ModuleNotFoundError: No module named 'aula99_package'
-  porque esse módulo foi feito para ser importado pelo __main__, e não foi feito para ser
+  isso irá gerar uma exceção: ModuleNotFoundError: No module
+  named 'aula99_package'
+  porque esse módulo foi feito para ser importado pelo __main__,
+  e não foi feito para ser
   executado sozinho
 '''
 from aula99_package.modulo_b import fala_oi

@@ -30,4 +30,3 @@ caminho_arquivo = caminho_arquivo.parent / 'arquivo.txt'
 with caminho_arquivo.open('a+') as file:
     file.write('Uma linha \n')
     file.write('Outra linha \n')
-

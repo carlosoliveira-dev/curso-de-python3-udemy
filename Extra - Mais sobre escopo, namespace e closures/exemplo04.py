@@ -1,4 +1,4 @@
-################################################################################
+###############################################################################
 #
 # o que é namespace?
 #
@@ -17,7 +17,7 @@
 #           acessíveis nele (como métodos e atributos). note que `dir()`
 #           retorna apenas os nomes, não os objetos ou seus valores.
 #
-################################################################################
+###############################################################################
 
 um_nome = "um_nome (global)"
 
@@ -25,6 +25,8 @@ um_nome = "um_nome (global)"
 def func_global(sou_local: str) -> None:
     um_nome = "um_nome (local)"
     outro_nome = "outro_nome (local)"
+    print(um_nome)
+    print(outro_nome)
     print("locals (namespace da função)")
     print("dir", dir())
     print("vars", vars())
@@ -37,13 +39,8 @@ def func_global(sou_local: str) -> None:
 print("globals (namespace do módulo)")
 print("dir", dir())
 print()
-for chave, valor in dict(vars()).items(): # congela o vars convertendo para dicionário para conseguir imprimir
+# congela o vars convertendo para dicionário para conseguir imprimir
+for chave, valor in dict(vars()).items():
     print(f"{chave} : {valor}")
 
 # print("vars", vars())
-
-#
-#
-#
-#
-#

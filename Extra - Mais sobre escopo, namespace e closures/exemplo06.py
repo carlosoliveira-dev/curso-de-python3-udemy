@@ -1,4 +1,5 @@
-################################################################################
+# type:ignore
+###############################################################################
 #
 # A regra LEGB e como o Python a usa para resolver nomes
 #
@@ -10,18 +11,20 @@
 #
 # De nenhum escopo externo é possível usar algo de escopo interno.
 #
-################################################################################
+###############################################################################
 import inspect
 from sitecustomize import get_legb
 
 nome_global = "nome_global"
 
 
-def func_global() -> None: # o corpo das funções só existe enquanto a função está executando
+def func_global() -> None:
+    # o corpo das funções só existe enquanto a função está executando
     nome_enclosing = "nome_enclosing"  # Enclosing (Local)
 
     def func_interna() -> None:
-        print("IMPRIMINDO", nome_enclosing) # o print o python encontra no Built-In
+        # o print o python encontra no Built-In
+        print("IMPRIMINDO", nome_enclosing)
 
         # nome_enclosing = "CRIAR UMA NOVA VARIÁVEL NESSE ESCOPO"
 

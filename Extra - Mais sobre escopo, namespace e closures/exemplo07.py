@@ -1,4 +1,5 @@
-################################################################################
+# type:ignore
+###############################################################################
 #
 # Uso de `global` e `nonlocal` para mudar o comportamento
 #
@@ -8,10 +9,10 @@
 #
 # ** `global` - Para modificar nomes do escopo global dentro de qualquer escopo
 #               local, precisamos usar a palavra chave `global`.
-# ** `nonlocal` -  Para modificar os nomes do escopo `enclosing` dentro de qualquer
-#               escopo local, precisamos usar a palavra chave `nonlocal`.
+# ** `nonlocal` -  Para modificar os nomes do escopo `enclosing` dentro de
+# qualquer escopo local, precisamos usar a palavra chave `nonlocal`.
 #
-################################################################################
+###############################################################################
 
 
 """
@@ -22,7 +23,8 @@ nome_global = "nome_global"
 
 
 def func_global() -> None:
-    global nome_global # ao invés de criar outra variável use a variável declarada acima
+    # ao invés de criar outra variável use a variável declarada acima
+    global nome_global
 
     nome_enclosing = "nome_enclosing"
     nome_global = 123456
@@ -30,9 +32,11 @@ def func_global() -> None:
     def func_interna() -> None:
         def func3() -> None:
             def func4() -> None:
-                nonlocal nome_enclosing # encontre a variável em uma das funções
+                # encontre a variável em uma das funções
+                nonlocal nome_enclosing
 
                 nome_local = "nome_local"
+                print(nome_local)
                 nome_enclosing = 654321
 
                 print("func_interna", nome_enclosing)

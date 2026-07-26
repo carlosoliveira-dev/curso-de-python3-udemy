@@ -8,7 +8,8 @@ print(f'{exemplo1=}', end='\n\n')
 """
 flat significa achatar(transformar em uma só lista)
 
-1- numeros: É a sua lista original que contém várias sublistas (ex: [[1, 2], [3, 4]]).
+1- numeros: É a sua lista original que contém várias sublistas
+(ex: [[1, 2], [3, 4]]).
 2- for x in numeros: Percorre cada sublista x dentro da lista principal.
 3- for y in x: Percorre cada elemento individual y dentro da sublista atual x.
 4- y (no início): É o que será adicionado à nova lista flat.

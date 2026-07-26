@@ -20,12 +20,14 @@ for i in range(5):
         file.unlink()
     else:
         file.touch()
-    
+
     with file.open('a+', encoding='utf8') as text_file:
         text_file.write('Olá mundo\n')
         text_file.write(f'file_{i}.txt')
 
 # apaga a pasta e os arquivos recursivamente
+
+
 def rmtree(root: Path, remove_root=True):
     for file in root.glob('*'):
         if file.is_dir():
@@ -38,5 +40,6 @@ def rmtree(root: Path, remove_root=True):
 
     if remove_root:
         root.rmdir()
+
 
 rmtree(files)

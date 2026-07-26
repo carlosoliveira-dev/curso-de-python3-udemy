@@ -1,4 +1,5 @@
-################################################################################
+# type:ignore
+###############################################################################
 #
 # PARA NERDS: varnames, freevars, cellvars
 #
@@ -21,7 +22,7 @@
 #    dentro mesmo.
 #
 #
-################################################################################
+###############################################################################
 
 from sitecustomize import get_all_names
 
@@ -33,7 +34,7 @@ def func_global() -> None:
 
     def func_interna() -> None:
         nome_local = nome_enclosing
-
+        print(nome_local)
         print("dir/locals func_interna: ", f"[color(45)]{', '.join(dir())}")
         get_all_names(func_interna.__code__)
 

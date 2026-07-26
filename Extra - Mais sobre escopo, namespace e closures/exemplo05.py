@@ -1,4 +1,4 @@
-################################################################################
+###############################################################################
 #
 # Relação entre escopo e namespace
 #
@@ -12,9 +12,10 @@
 # É por isso que, ao fazer `import x`, dizemos que `x` é um namespace, ele
 # guarda nomes como `x.func_global()`, `x.valor`, etc.
 #
-################################################################################
+###############################################################################
 import x
 from pprint import pprint
+
 
 def func_global() -> None:
     print(f"Estou em: {__name__} - {__file__.split('/')[-1]}")

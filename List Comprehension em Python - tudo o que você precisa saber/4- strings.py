@@ -1,3 +1,4 @@
+# type:ignore
 string = 'Otávio Miranda'
 
 numero_de_letras = 3
@@ -16,7 +17,7 @@ print(nova_string)
 
 # adiciona um ponto em cada fatia da string
 nova_string = '.'.join([
-    # fatiamento da string (indice atual) : (indice atual + numero_de_letras) 
+    # fatiamento da string (indice atual) : (indice atual + numero_de_letras)
     string[indice:indice + numero_de_letras]
     for indice in range(0, len(string), numero_de_letras)
 ])

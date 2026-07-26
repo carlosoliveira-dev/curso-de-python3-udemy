@@ -1,4 +1,5 @@
 # ruff: noqa: S605,S607,RUF001
+# type:ignore
 import builtins
 import os
 from types import CodeType, FrameType
@@ -51,11 +52,13 @@ def get_legb(name: str, frame: FrameType | None) -> None:
 
         if name in current.f_locals:
             internal_success(
-                f"{name!r} encontrado em {f_name!r}", indent_width=scope_counter
+                f"{name!r} encontrado em {f_name!r}",
+                indent_width=scope_counter
             )
             break
         internal_error(
-            f"Nome {name!r} NÃO ENCONTRADO em {f_name!r}", indent_width=scope_counter
+            f"Nome {name!r} NÃO ENCONTRADO em {f_name!r}",
+            indent_width=scope_counter
         )
 
         current = current.f_back
@@ -68,7 +71,8 @@ def get_legb(name: str, frame: FrameType | None) -> None:
 
         if hasattr(builtins, name):
             success_builtin(
-                f" {name!r} encontrado em {f_name!r}", indent_width=scope_counter
+                f" {name!r} encontrado em {f_name!r}",
+                indent_width=scope_counter
             )
         else:
             error_builtin(

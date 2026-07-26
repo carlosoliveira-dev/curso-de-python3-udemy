@@ -1,6 +1,6 @@
 """Um módulo de exemplo"""
 
-################################################################################
+###############################################################################
 #
 # O que é escopo
 #
@@ -17,7 +17,7 @@
 # Cada escopo tem seu "espaço de nomes" (namespace), que é um local onde os
 # nomes e seus respectivos objetos são armazenados.
 #
-################################################################################
+###############################################################################
 
 # nome definido no escopo global (módulo)
 um_nome = "um_nome (GLOBAL)"
@@ -49,10 +49,3 @@ func_global("arg (local)")
 
 print(f"Fora da função: {um_nome}")  # Acessa a variável GLOBAL
 # Saída - Fora da função: um_nome (GLOBAL)
-
-
-#
-#
-#
-#
-#
